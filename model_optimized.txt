@@ -1,23 +1,114 @@
-#!/usr/bin/env python3
-"""
-calculate_reimbursement.py
-──────────────────────────
-Runtime scorer for the ACME legacy challenge.
+[32m[I 2025-06-07 15:49:58,152][0m Trial 0 finished with value: 71.22366486891823 and parameters: {'n_estimators': 1200, 'learning_rate': 0.04260424000595026, 'max_depth': 5, 'subsample': 0.7724415914984484, 'min_samples_leaf': 45, 'loss': 'huber', 'alpha': 0.9409156901252573}. Best is trial 0 with value: 71.22366486891823.[0m
+[32m[I 2025-06-07 15:49:59,362][0m Trial 1 finished with value: 79.62954688469357 and parameters: {'n_estimators': 900, 'learning_rate': 0.05358312362730346, 'max_depth': 4, 'subsample': 0.7840222805469661, 'min_samples_leaf': 93, 'loss': 'absolute_error', 'alpha': 0.9081549613869845}. Best is trial 0 with value: 71.22366486891823.[0m
+[32m[I 2025-06-07 15:49:59,981][0m Trial 2 finished with value: 80.81986293490355 and parameters: {'n_estimators': 1600, 'learning_rate': 0.06774572670605332, 'max_depth': 6, 'subsample': 0.8995792821083618, 'min_samples_leaf': 49, 'loss': 'squared_error', 'alpha': 0.7358383218522615}. Best is trial 0 with value: 71.22366486891823.[0m
+[32m[I 2025-06-07 15:50:00,937][0m Trial 3 finished with value: 81.72863507150564 and parameters: {'n_estimators': 1900, 'learning_rate': 0.023873182833893645, 'max_depth': 4, 'subsample': 0.6322778060523135, 'min_samples_leaf': 79, 'loss': 'absolute_error', 'alpha': 0.8544088742689693}. Best is trial 0 with value: 71.22366486891823.[0m
+[32m[I 2025-06-07 15:50:01,939][0m Trial 4 finished with value: 71.91162685192819 and parameters: {'n_estimators': 1300, 'learning_rate': 0.03174092943781574, 'max_depth': 6, 'subsample': 0.8409101495517417, 'min_samples_leaf': 39, 'loss': 'absolute_error', 'alpha': 0.8666916788614168}. Best is trial 0 with value: 71.22366486891823.[0m
+[32m[I 2025-06-07 15:50:03,398][0m Trial 5 finished with value: 80.89310840806174 and parameters: {'n_estimators': 1400, 'learning_rate': 0.009390398587815565, 'max_depth': 2, 'subsample': 0.6577141754620919, 'min_samples_leaf': 39, 'loss': 'huber', 'alpha': 0.725511202687007}. Best is trial 0 with value: 71.22366486891823.[0m
+[32m[I 2025-06-07 15:50:04,150][0m Trial 6 finished with value: 85.48200994099898 and parameters: {'n_estimators': 500, 'learning_rate': 0.008106595918180286, 'max_depth': 5, 'subsample': 0.626645801269891, 'min_samples_leaf': 49, 'loss': 'squared_error', 'alpha': 0.8640823973663183}. Best is trial 0 with value: 71.22366486891823.[0m
+[32m[I 2025-06-07 15:50:05,475][0m Trial 7 finished with value: 81.8737191953684 and parameters: {'n_estimators': 400, 'learning_rate': 0.009010098805195143, 'max_depth': 3, 'subsample': 0.9104966149239675, 'min_samples_leaf': 14, 'loss': 'huber', 'alpha': 0.8171628004119253}. Best is trial 0 with value: 71.22366486891823.[0m
+[32m[I 2025-06-07 15:50:06,299][0m Trial 8 finished with value: 72.97593104729522 and parameters: {'n_estimators': 2000, 'learning_rate': 0.030612032678364123, 'max_depth': 5, 'subsample': 0.5195938961271603, 'min_samples_leaf': 32, 'loss': 'absolute_error', 'alpha': 0.779495794848494}. Best is trial 0 with value: 71.22366486891823.[0m
+[32m[I 2025-06-07 15:50:09,704][0m Trial 9 finished with value: 74.81223442677981 and parameters: {'n_estimators': 900, 'learning_rate': 0.006059374867087375, 'max_depth': 5, 'subsample': 0.7833007271032876, 'min_samples_leaf': 30, 'loss': 'huber', 'alpha': 0.9323240493940534}. Best is trial 0 with value: 71.22366486891823.[0m
+[32m[I 2025-06-07 15:50:10,544][0m Trial 10 finished with value: 75.22126255513145 and parameters: {'n_estimators': 800, 'learning_rate': 0.09377748725691788, 'max_depth': 3, 'subsample': 0.9648201775139151, 'min_samples_leaf': 70, 'loss': 'huber', 'alpha': 0.9183678977509065}. Best is trial 0 with value: 71.22366486891823.[0m
+[32m[I 2025-06-07 15:50:11,695][0m Trial 11 finished with value: 69.38579412894252 and parameters: {'n_estimators': 1300, 'learning_rate': 0.038458325195099466, 'max_depth': 6, 'subsample': 0.8377513680833146, 'min_samples_leaf': 8, 'loss': 'absolute_error', 'alpha': 0.8867642709468515}. Best is trial 11 with value: 69.38579412894252.[0m
+[32m[I 2025-06-07 15:50:12,519][0m Trial 12 finished with value: 70.37816721803607 and parameters: {'n_estimators': 1200, 'learning_rate': 0.042248261818167834, 'max_depth': 6, 'subsample': 0.7129293196010145, 'min_samples_leaf': 10, 'loss': 'absolute_error', 'alpha': 0.9431794040792342}. Best is trial 11 with value: 69.38579412894252.[0m
+[32m[I 2025-06-07 15:50:15,775][0m Trial 13 finished with value: 67.21510463545611 and parameters: {'n_estimators': 1600, 'learning_rate': 0.014285367928498329, 'max_depth': 6, 'subsample': 0.7015586062833208, 'min_samples_leaf': 5, 'loss': 'absolute_error', 'alpha': 0.8825015010316015}. Best is trial 13 with value: 67.21510463545611.[0m
+[32m[I 2025-06-07 15:50:18,488][0m Trial 14 finished with value: 68.1286754983317 and parameters: {'n_estimators': 1600, 'learning_rate': 0.014652167280488763, 'max_depth': 6, 'subsample': 0.701963168313003, 'min_samples_leaf': 7, 'loss': 'absolute_error', 'alpha': 0.8897667535552413}. Best is trial 13 with value: 67.21510463545611.[0m
+[32m[I 2025-06-07 15:50:20,784][0m Trial 15 finished with value: 69.93351489815028 and parameters: {'n_estimators': 1700, 'learning_rate': 0.01455335730593193, 'max_depth': 6, 'subsample': 0.559299224331495, 'min_samples_leaf': 21, 'loss': 'absolute_error', 'alpha': 0.8192605467305983}. Best is trial 13 with value: 67.21510463545611.[0m
+[32m[I 2025-06-07 15:50:22,951][0m Trial 16 finished with value: 68.9882281968368 and parameters: {'n_estimators': 1600, 'learning_rate': 0.01473330571374872, 'max_depth': 5, 'subsample': 0.698947880647542, 'min_samples_leaf': 23, 'loss': 'absolute_error', 'alpha': 0.8930664414673583}. Best is trial 13 with value: 67.21510463545611.[0m
+[32m[I 2025-06-07 15:50:23,660][0m Trial 17 finished with value: 80.53837088459194 and parameters: {'n_estimators': 1800, 'learning_rate': 0.014946881774710851, 'max_depth': 4, 'subsample': 0.5807247498484653, 'min_samples_leaf': 61, 'loss': 'squared_error', 'alpha': 0.8442352307788248}. Best is trial 13 with value: 67.21510463545611.[0m
+[32m[I 2025-06-07 15:50:24,834][0m Trial 18 finished with value: 71.59496111318329 and parameters: {'n_estimators': 1500, 'learning_rate': 0.018394952756336368, 'max_depth': 3, 'subsample': 0.7322995803002554, 'min_samples_leaf': 5, 'loss': 'absolute_error', 'alpha': 0.7923443380036322}. Best is trial 13 with value: 67.21510463545611.[0m
+[32m[I 2025-06-07 15:50:27,785][0m Trial 19 finished with value: 68.68607616104315 and parameters: {'n_estimators': 1800, 'learning_rate': 0.010499524540292427, 'max_depth': 6, 'subsample': 0.6758488845740126, 'min_samples_leaf': 18, 'loss': 'absolute_error', 'alpha': 0.8752923260638301}. Best is trial 13 with value: 67.21510463545611.[0m
+[32m[I 2025-06-07 15:50:28,823][0m Trial 20 finished with value: 86.51325514217535 and parameters: {'n_estimators': 1000, 'learning_rate': 0.005063206274716003, 'max_depth': 2, 'subsample': 0.5970995540708873, 'min_samples_leaf': 28, 'loss': 'squared_error', 'alpha': 0.7004945004681755}. Best is trial 13 with value: 67.21510463545611.[0m
+[32m[I 2025-06-07 15:50:31,803][0m Trial 21 finished with value: 69.5270300486293 and parameters: {'n_estimators': 1800, 'learning_rate': 0.011547816817932053, 'max_depth': 6, 'subsample': 0.679074911238749, 'min_samples_leaf': 17, 'loss': 'absolute_error', 'alpha': 0.8835304789132532}. Best is trial 13 with value: 67.21510463545611.[0m
+[32m[I 2025-06-07 15:50:34,002][0m Trial 22 finished with value: 68.72585026910558 and parameters: {'n_estimators': 2000, 'learning_rate': 0.021031453721506384, 'max_depth': 6, 'subsample': 0.7388116042270068, 'min_samples_leaf': 5, 'loss': 'absolute_error', 'alpha': 0.905508140077654}. Best is trial 13 with value: 67.21510463545611.[0m
+[32m[I 2025-06-07 15:50:36,688][0m Trial 23 finished with value: 69.07582975775881 and parameters: {'n_estimators': 1500, 'learning_rate': 0.011715831159560064, 'max_depth': 5, 'subsample': 0.6656901696985695, 'min_samples_leaf': 17, 'loss': 'absolute_error', 'alpha': 0.837557364518172}. Best is trial 13 with value: 67.21510463545611.[0m
+[32m[I 2025-06-07 15:50:41,914][0m Trial 24 finished with value: 69.94651058166183 and parameters: {'n_estimators': 1700, 'learning_rate': 0.00747437912090169, 'max_depth': 6, 'subsample': 0.8377421086376858, 'min_samples_leaf': 24, 'loss': 'absolute_error', 'alpha': 0.8779103744482106}. Best is trial 13 with value: 67.21510463545611.[0m
+[32m[I 2025-06-07 15:50:44,885][0m Trial 25 finished with value: 67.10629108807395 and parameters: {'n_estimators': 1800, 'learning_rate': 0.010781594910872761, 'max_depth': 5, 'subsample': 0.6177954780888698, 'min_samples_leaf': 13, 'loss': 'absolute_error', 'alpha': 0.9200859000511894}. Best is trial 25 with value: 67.10629108807395.[0m
+[32m[I 2025-06-07 15:50:46,258][0m Trial 26 finished with value: 69.51385349523926 and parameters: {'n_estimators': 1500, 'learning_rate': 0.019135432531330782, 'max_depth': 5, 'subsample': 0.5327897469259781, 'min_samples_leaf': 12, 'loss': 'absolute_error', 'alpha': 0.9176963085646785}. Best is trial 25 with value: 67.10629108807395.[0m
+[32m[I 2025-06-07 15:50:47,853][0m Trial 27 finished with value: 74.08243794054806 and parameters: {'n_estimators': 600, 'learning_rate': 0.013803174723634702, 'max_depth': 5, 'subsample': 0.6278026341825361, 'min_samples_leaf': 35, 'loss': 'absolute_error', 'alpha': 0.900085019313532}. Best is trial 25 with value: 67.10629108807395.[0m
+[32m[I 2025-06-07 15:50:48,101][0m Trial 28 finished with value: 168.60092876836032 and parameters: {'n_estimators': 200, 'learning_rate': 0.00653672056923206, 'max_depth': 5, 'subsample': 0.5965520893448792, 'min_samples_leaf': 57, 'loss': 'squared_error', 'alpha': 0.9277261060780888}. Best is trial 25 with value: 67.10629108807395.[0m
+[32m[I 2025-06-07 15:50:50,178][0m Trial 29 finished with value: 68.30590283595531 and parameters: {'n_estimators': 1100, 'learning_rate': 0.02491987171681931, 'max_depth': 5, 'subsample': 0.7614072467104547, 'min_samples_leaf': 5, 'loss': 'absolute_error', 'alpha': 0.9423463630419763}. Best is trial 25 with value: 67.10629108807395.[0m
+[32m[I 2025-06-07 15:50:53,662][0m Trial 30 finished with value: 67.40142912551966 and parameters: {'n_estimators': 1900, 'learning_rate': 0.012130366409081788, 'max_depth': 4, 'subsample': 0.8009832673920044, 'min_samples_leaf': 13, 'loss': 'huber', 'alpha': 0.7985384106370393}. Best is trial 25 with value: 67.10629108807395.[0m
+[32m[I 2025-06-07 15:50:56,785][0m Trial 31 finished with value: 66.77950753840005 and parameters: {'n_estimators': 1900, 'learning_rate': 0.01771230202923314, 'max_depth': 4, 'subsample': 0.7946612335423328, 'min_samples_leaf': 12, 'loss': 'huber', 'alpha': 0.7861572771245262}. Best is trial 31 with value: 66.77950753840005.[0m
+[32m[I 2025-06-07 15:51:00,932][0m Trial 32 finished with value: 78.24074040084447 and parameters: {'n_estimators': 2000, 'learning_rate': 0.01768419824768021, 'max_depth': 4, 'subsample': 0.80569251372458, 'min_samples_leaf': 94, 'loss': 'huber', 'alpha': 0.7938761032882087}. Best is trial 31 with value: 66.77950753840005.[0m
+[32m[I 2025-06-07 15:51:04,146][0m Trial 33 finished with value: 68.33507087302632 and parameters: {'n_estimators': 1900, 'learning_rate': 0.011423832108267003, 'max_depth': 4, 'subsample': 0.8800557694442354, 'min_samples_leaf': 25, 'loss': 'huber', 'alpha': 0.7637560391095881}. Best is trial 31 with value: 66.77950753840005.[0m
+[32m[I 2025-06-07 15:51:08,093][0m Trial 34 finished with value: 67.1300522570095 and parameters: {'n_estimators': 1900, 'learning_rate': 0.026841114575857486, 'max_depth': 4, 'subsample': 0.8079361189091788, 'min_samples_leaf': 13, 'loss': 'huber', 'alpha': 0.7500383615502945}. Best is trial 31 with value: 66.77950753840005.[0m
+[32m[I 2025-06-07 15:51:09,929][0m Trial 35 finished with value: 72.42237274485016 and parameters: {'n_estimators': 1700, 'learning_rate': 0.025719632723925755, 'max_depth': 3, 'subsample': 0.7585808440561331, 'min_samples_leaf': 42, 'loss': 'huber', 'alpha': 0.7562233330023378}. Best is trial 31 with value: 66.77950753840005.[0m
+[32m[I 2025-06-07 15:51:11,812][0m Trial 36 finished with value: 75.48789143804333 and parameters: {'n_estimators': 1800, 'learning_rate': 0.05189620158717614, 'max_depth': 4, 'subsample': 0.8706145456212669, 'min_samples_leaf': 88, 'loss': 'huber', 'alpha': 0.7605671087795436}. Best is trial 31 with value: 66.77950753840005.[0m
+[32m[I 2025-06-07 15:51:14,264][0m Trial 37 finished with value: 65.70528926366867 and parameters: {'n_estimators': 1900, 'learning_rate': 0.02917668732681493, 'max_depth': 4, 'subsample': 0.9585496357722629, 'min_samples_leaf': 18, 'loss': 'huber', 'alpha': 0.7383093845539699}. Best is trial 37 with value: 65.70528926366867.[0m
+[32m[I 2025-06-07 15:51:18,557][0m Trial 38 finished with value: 67.57235922306442 and parameters: {'n_estimators': 1900, 'learning_rate': 0.03231564065168473, 'max_depth': 4, 'subsample': 0.9500853321133692, 'min_samples_leaf': 37, 'loss': 'huber', 'alpha': 0.7296338431328516}. Best is trial 37 with value: 65.70528926366867.[0m
+[32m[I 2025-06-07 15:51:22,050][0m Trial 39 finished with value: 66.27149879946984 and parameters: {'n_estimators': 2000, 'learning_rate': 0.027065769115391897, 'max_depth': 3, 'subsample': 0.9829619849494378, 'min_samples_leaf': 20, 'loss': 'huber', 'alpha': 0.7444940891283433}. Best is trial 37 with value: 65.70528926366867.[0m
+[32m[I 2025-06-07 15:51:23,253][0m Trial 40 finished with value: 69.25104886886956 and parameters: {'n_estimators': 2000, 'learning_rate': 0.05348974918257197, 'max_depth': 3, 'subsample': 0.9864649897496655, 'min_samples_leaf': 29, 'loss': 'huber', 'alpha': 0.7119956193703078}. Best is trial 37 with value: 65.70528926366867.[0m
+[32m[I 2025-06-07 15:51:25,978][0m Trial 41 finished with value: 66.30177460297847 and parameters: {'n_estimators': 1900, 'learning_rate': 0.02876869173307534, 'max_depth': 4, 'subsample': 0.9145336920937737, 'min_samples_leaf': 18, 'loss': 'huber', 'alpha': 0.7450291732799967}. Best is trial 37 with value: 65.70528926366867.[0m
+[32m[I 2025-06-07 15:51:27,717][0m Trial 42 finished with value: 67.41086983695449 and parameters: {'n_estimators': 2000, 'learning_rate': 0.03516058310899145, 'max_depth': 3, 'subsample': 0.9343361334892443, 'min_samples_leaf': 19, 'loss': 'huber', 'alpha': 0.7366377300681137}. Best is trial 37 with value: 65.70528926366867.[0m
+[32m[I 2025-06-07 15:51:29,761][0m Trial 43 finished with value: 74.7619285969895 and parameters: {'n_estimators': 1700, 'learning_rate': 0.021896102481346748, 'max_depth': 2, 'subsample': 0.9990832584728286, 'min_samples_leaf': 48, 'loss': 'huber', 'alpha': 0.7711147044878687}. Best is trial 37 with value: 65.70528926366867.[0m
+[32m[I 2025-06-07 15:51:32,427][0m Trial 44 finished with value: 68.51526028154322 and parameters: {'n_estimators': 1800, 'learning_rate': 0.029180951317280667, 'max_depth': 3, 'subsample': 0.9149838295114257, 'min_samples_leaf': 33, 'loss': 'huber', 'alpha': 0.7486161390466237}. Best is trial 37 with value: 65.70528926366867.[0m
+[32m[I 2025-06-07 15:51:33,667][0m Trial 45 finished with value: 68.12547253112723 and parameters: {'n_estimators': 1900, 'learning_rate': 0.06904904696125451, 'max_depth': 4, 'subsample': 0.9735560257557903, 'min_samples_leaf': 15, 'loss': 'huber', 'alpha': 0.7805715616075654}. Best is trial 37 with value: 65.70528926366867.[0m
+[32m[I 2025-06-07 15:51:36,689][0m Trial 46 finished with value: 66.59160502057915 and parameters: {'n_estimators': 2000, 'learning_rate': 0.03824723089048601, 'max_depth': 4, 'subsample': 0.9467446725415524, 'min_samples_leaf': 26, 'loss': 'huber', 'alpha': 0.719276829932944}. Best is trial 37 with value: 65.70528926366867.[0m
+[32m[I 2025-06-07 15:51:38,366][0m Trial 47 finished with value: 67.72266545921396 and parameters: {'n_estimators': 2000, 'learning_rate': 0.04593649494774543, 'max_depth': 4, 'subsample': 0.9327524183097876, 'min_samples_leaf': 27, 'loss': 'huber', 'alpha': 0.7149634842873948}. Best is trial 37 with value: 65.70528926366867.[0m
+[32m[I 2025-06-07 15:51:41,174][0m Trial 48 finished with value: 68.02584549199355 and parameters: {'n_estimators': 1300, 'learning_rate': 0.03769359633635368, 'max_depth': 3, 'subsample': 0.8829970814092569, 'min_samples_leaf': 45, 'loss': 'huber', 'alpha': 0.7346947110284888}. Best is trial 37 with value: 65.70528926366867.[0m
+[32m[I 2025-06-07 15:51:44,242][0m Trial 49 finished with value: 66.73596814507667 and parameters: {'n_estimators': 1700, 'learning_rate': 0.04459541518936536, 'max_depth': 4, 'subsample': 0.9645695738541163, 'min_samples_leaf': 20, 'loss': 'huber', 'alpha': 0.7169574641506645}. Best is trial 37 with value: 65.70528926366867.[0m
+[32m[I 2025-06-07 15:51:46,625][0m Trial 50 finished with value: 65.75131303099285 and parameters: {'n_estimators': 1700, 'learning_rate': 0.06554467458840489, 'max_depth': 3, 'subsample': 0.9637279348561406, 'min_samples_leaf': 22, 'loss': 'huber', 'alpha': 0.7182422659597757}. Best is trial 37 with value: 65.70528926366867.[0m
+[32m[I 2025-06-07 15:51:48,497][0m Trial 51 finished with value: 67.29610170535443 and parameters: {'n_estimators': 1700, 'learning_rate': 0.06610512570901288, 'max_depth': 3, 'subsample': 0.9588785927893876, 'min_samples_leaf': 20, 'loss': 'huber', 'alpha': 0.7210961724414168}. Best is trial 37 with value: 65.70528926366867.[0m
+[32m[I 2025-06-07 15:51:50,290][0m Trial 52 finished with value: 68.99855819351419 and parameters: {'n_estimators': 1600, 'learning_rate': 0.08195811201994783, 'max_depth': 2, 'subsample': 0.9368127216346088, 'min_samples_leaf': 22, 'loss': 'huber', 'alpha': 0.7059973835224642}. Best is trial 37 with value: 65.70528926366867.[0m
+[32m[I 2025-06-07 15:51:54,488][0m Trial 53 finished with value: 68.17194456934783 and parameters: {'n_estimators': 1400, 'learning_rate': 0.04505967318442878, 'max_depth': 4, 'subsample': 0.9041992625322115, 'min_samples_leaf': 32, 'loss': 'huber', 'alpha': 0.7426351956450855}. Best is trial 37 with value: 65.70528926366867.[0m
+[32m[I 2025-06-07 15:51:58,661][0m Trial 54 finished with value: 65.59557708079659 and parameters: {'n_estimators': 2000, 'learning_rate': 0.06435240307812339, 'max_depth': 3, 'subsample': 0.9794780341636087, 'min_samples_leaf': 26, 'loss': 'huber', 'alpha': 0.7184133473357521}. Best is trial 54 with value: 65.59557708079659.[0m
+[32m[I 2025-06-07 15:51:59,991][0m Trial 55 finished with value: 69.06103201580713 and parameters: {'n_estimators': 2000, 'learning_rate': 0.06423317892577797, 'max_depth': 3, 'subsample': 0.9824287052863693, 'min_samples_leaf': 25, 'loss': 'huber', 'alpha': 0.7257800672566685}. Best is trial 54 with value: 65.59557708079659.[0m
+[32m[I 2025-06-07 15:52:00,254][0m Trial 56 finished with value: 79.33426389614931 and parameters: {'n_estimators': 2000, 'learning_rate': 0.07722825896566489, 'max_depth': 3, 'subsample': 0.9963073431554949, 'min_samples_leaf': 40, 'loss': 'squared_error', 'alpha': 0.7022485445304334}. Best is trial 54 with value: 65.59557708079659.[0m
+[32m[I 2025-06-07 15:52:02,266][0m Trial 57 finished with value: 69.64194440225724 and parameters: {'n_estimators': 1800, 'learning_rate': 0.05903162519110921, 'max_depth': 2, 'subsample': 0.919014215645821, 'min_samples_leaf': 29, 'loss': 'huber', 'alpha': 0.7451755262296161}. Best is trial 54 with value: 65.59557708079659.[0m
+[32m[I 2025-06-07 15:52:04,110][0m Trial 58 finished with value: 74.09272880411217 and parameters: {'n_estimators': 700, 'learning_rate': 0.09763514070550754, 'max_depth': 3, 'subsample': 0.9454733896001286, 'min_samples_leaf': 79, 'loss': 'huber', 'alpha': 0.728255256287189}. Best is trial 54 with value: 65.59557708079659.[0m
+[32m[I 2025-06-07 15:52:05,877][0m Trial 59 finished with value: 68.74121787519552 and parameters: {'n_estimators': 1900, 'learning_rate': 0.02915868498371613, 'max_depth': 3, 'subsample': 0.8952249773883805, 'min_samples_leaf': 9, 'loss': 'huber', 'alpha': 0.7711784829993298}. Best is trial 54 with value: 65.59557708079659.[0m
+[32m[I 2025-06-07 15:52:07,863][0m Trial 60 finished with value: 65.17909529835002 and parameters: {'n_estimators': 1900, 'learning_rate': 0.08432819632958084, 'max_depth': 3, 'subsample': 0.973767290295144, 'min_samples_leaf': 16, 'loss': 'huber', 'alpha': 0.7361409058451146}. Best is trial 60 with value: 65.17909529835002.[0m
+[32m[I 2025-06-07 15:52:09,797][0m Trial 61 finished with value: 65.6606432531335 and parameters: {'n_estimators': 1900, 'learning_rate': 0.08944919524249728, 'max_depth': 3, 'subsample': 0.9720699468793039, 'min_samples_leaf': 17, 'loss': 'huber', 'alpha': 0.7374791900351861}. Best is trial 60 with value: 65.17909529835002.[0m
+[32m[I 2025-06-07 15:52:12,316][0m Trial 62 finished with value: 65.6075779871405 and parameters: {'n_estimators': 1900, 'learning_rate': 0.08219693533676188, 'max_depth': 3, 'subsample': 0.9742379716783749, 'min_samples_leaf': 15, 'loss': 'huber', 'alpha': 0.7364595457163974}. Best is trial 60 with value: 65.17909529835002.[0m
+[32m[I 2025-06-07 15:52:13,998][0m Trial 63 finished with value: 66.89760766196999 and parameters: {'n_estimators': 1800, 'learning_rate': 0.08116314448096233, 'max_depth': 3, 'subsample': 0.970308420693596, 'min_samples_leaf': 16, 'loss': 'huber', 'alpha': 0.734361697060815}. Best is trial 60 with value: 65.17909529835002.[0m
+[32m[I 2025-06-07 15:52:14,316][0m Trial 64 finished with value: 78.0789734428861 and parameters: {'n_estimators': 1800, 'learning_rate': 0.08963912244788533, 'max_depth': 2, 'subsample': 0.9816231815182795, 'min_samples_leaf': 22, 'loss': 'squared_error', 'alpha': 0.7080585973753414}. Best is trial 60 with value: 65.17909529835002.[0m
+[32m[I 2025-06-07 15:52:15,309][0m Trial 65 finished with value: 68.60431935967411 and parameters: {'n_estimators': 1900, 'learning_rate': 0.07764305356542604, 'max_depth': 3, 'subsample': 0.9599877783242093, 'min_samples_leaf': 8, 'loss': 'huber', 'alpha': 0.7569110394499178}. Best is trial 60 with value: 65.17909529835002.[0m
+[32m[I 2025-06-07 15:52:18,123][0m Trial 66 finished with value: 67.45132870335736 and parameters: {'n_estimators': 1600, 'learning_rate': 0.0713041325637725, 'max_depth': 3, 'subsample': 0.9965235142347348, 'min_samples_leaf': 10, 'loss': 'huber', 'alpha': 0.7392566299009674}. Best is trial 60 with value: 65.17909529835002.[0m
+[32m[I 2025-06-07 15:52:20,659][0m Trial 67 finished with value: 67.07014511010567 and parameters: {'n_estimators': 2000, 'learning_rate': 0.08931073663242128, 'max_depth': 3, 'subsample': 0.9267890617217288, 'min_samples_leaf': 23, 'loss': 'huber', 'alpha': 0.7253833861828526}. Best is trial 60 with value: 65.17909529835002.[0m
+[32m[I 2025-06-07 15:52:21,813][0m Trial 68 finished with value: 70.59059882032652 and parameters: {'n_estimators': 1900, 'learning_rate': 0.05856635456750122, 'max_depth': 2, 'subsample': 0.8565341323091386, 'min_samples_leaf': 15, 'loss': 'huber', 'alpha': 0.7521783193669305}. Best is trial 60 with value: 65.17909529835002.[0m
+[32m[I 2025-06-07 15:52:23,571][0m Trial 69 finished with value: 68.58790742908985 and parameters: {'n_estimators': 1700, 'learning_rate': 0.05877417908631906, 'max_depth': 3, 'subsample': 0.97575901439633, 'min_samples_leaf': 31, 'loss': 'huber', 'alpha': 0.805598410445008}. Best is trial 60 with value: 65.17909529835002.[0m
+[32m[I 2025-06-07 15:52:23,946][0m Trial 70 finished with value: 76.32401685897672 and parameters: {'n_estimators': 1600, 'learning_rate': 0.09942945700332621, 'max_depth': 3, 'subsample': 0.9533664008909624, 'min_samples_leaf': 11, 'loss': 'squared_error', 'alpha': 0.7670559644557784}. Best is trial 60 with value: 65.17909529835002.[0m
+[32m[I 2025-06-07 15:52:27,276][0m Trial 71 finished with value: 67.36981880564507 and parameters: {'n_estimators': 1800, 'learning_rate': 0.08605284699117147, 'max_depth': 3, 'subsample': 0.9860272214279683, 'min_samples_leaf': 19, 'loss': 'huber', 'alpha': 0.7406834835099243}. Best is trial 60 with value: 65.17909529835002.[0m
+[32m[I 2025-06-07 15:52:32,839][0m Trial 72 finished with value: 68.85557309674776 and parameters: {'n_estimators': 1900, 'learning_rate': 0.07355535388220555, 'max_depth': 3, 'subsample': 0.9656200402737217, 'min_samples_leaf': 17, 'loss': 'huber', 'alpha': 0.7329142551843957}. Best is trial 60 with value: 65.17909529835002.[0m
+[32m[I 2025-06-07 15:52:36,614][0m Trial 73 finished with value: 67.44789642498293 and parameters: {'n_estimators': 1900, 'learning_rate': 0.04949916361356622, 'max_depth': 3, 'subsample': 0.9208884723781144, 'min_samples_leaf': 16, 'loss': 'huber', 'alpha': 0.7110202099363594}. Best is trial 60 with value: 65.17909529835002.[0m
+[32m[I 2025-06-07 15:52:38,686][0m Trial 74 finished with value: 71.14970538125098 and parameters: {'n_estimators': 2000, 'learning_rate': 0.02300331251737358, 'max_depth': 2, 'subsample': 0.9441520796644053, 'min_samples_leaf': 21, 'loss': 'huber', 'alpha': 0.7439094297491523}. Best is trial 60 with value: 65.17909529835002.[0m
+[32m[I 2025-06-07 15:52:40,539][0m Trial 75 finished with value: 68.33074153811896 and parameters: {'n_estimators': 1800, 'learning_rate': 0.0334869981939434, 'max_depth': 3, 'subsample': 0.9896700546734775, 'min_samples_leaf': 24, 'loss': 'huber', 'alpha': 0.7199106673588272}. Best is trial 60 with value: 65.17909529835002.[0m
+[32m[I 2025-06-07 15:52:44,427][0m Trial 76 finished with value: 70.38546243636395 and parameters: {'n_estimators': 1900, 'learning_rate': 0.06386815070132572, 'max_depth': 4, 'subsample': 0.8962206126804013, 'min_samples_leaf': 8, 'loss': 'huber', 'alpha': 0.757584960533281}. Best is trial 60 with value: 65.17909529835002.[0m
+[32m[I 2025-06-07 15:52:47,783][0m Trial 77 finished with value: 75.61318401737732 and parameters: {'n_estimators': 2000, 'learning_rate': 0.02033383306146528, 'max_depth': 3, 'subsample': 0.9711834185830011, 'min_samples_leaf': 66, 'loss': 'huber', 'alpha': 0.749259276994831}. Best is trial 60 with value: 65.17909529835002.[0m
+[32m[I 2025-06-07 15:52:49,919][0m Trial 78 finished with value: 68.65975352540725 and parameters: {'n_estimators': 1500, 'learning_rate': 0.027065915885819507, 'max_depth': 3, 'subsample': 0.9592056364898996, 'min_samples_leaf': 35, 'loss': 'huber', 'alpha': 0.7239028212770816}. Best is trial 60 with value: 65.17909529835002.[0m
+[32m[I 2025-06-07 15:52:51,591][0m Trial 79 finished with value: 69.35218427115139 and parameters: {'n_estimators': 400, 'learning_rate': 0.09308014839704386, 'max_depth': 4, 'subsample': 0.9999394123744295, 'min_samples_leaf': 14, 'loss': 'huber', 'alpha': 0.7772331549830143}. Best is trial 60 with value: 65.17909529835002.[0m
+[32m[I 2025-06-07 15:52:53,861][0m Trial 80 finished with value: 67.26801426216808 and parameters: {'n_estimators': 1800, 'learning_rate': 0.04086344418109563, 'max_depth': 3, 'subsample': 0.9093794590523733, 'min_samples_leaf': 27, 'loss': 'huber', 'alpha': 0.7001520661556478}. Best is trial 60 with value: 65.17909529835002.[0m
+[32m[I 2025-06-07 15:52:57,839][0m Trial 81 finished with value: 68.00046207497334 and parameters: {'n_estimators': 2000, 'learning_rate': 0.030357993798914535, 'max_depth': 4, 'subsample': 0.9428920491550556, 'min_samples_leaf': 26, 'loss': 'huber', 'alpha': 0.7191160659292731}. Best is trial 60 with value: 65.17909529835002.[0m
+[32m[I 2025-06-07 15:53:05,200][0m Trial 82 finished with value: 67.347355482829 and parameters: {'n_estimators': 1900, 'learning_rate': 0.023441300200413746, 'max_depth': 4, 'subsample': 0.9511710423764472, 'min_samples_leaf': 18, 'loss': 'huber', 'alpha': 0.7144872121945387}. Best is trial 60 with value: 65.17909529835002.[0m
+[32m[I 2025-06-07 15:53:11,529][0m Trial 83 finished with value: 68.36889163642128 and parameters: {'n_estimators': 2000, 'learning_rate': 0.036381098253939606, 'max_depth': 4, 'subsample': 0.9284985827184375, 'min_samples_leaf': 11, 'loss': 'huber', 'alpha': 0.7334383026192876}. Best is trial 60 with value: 65.17909529835002.[0m
+[32m[I 2025-06-07 15:53:14,654][0m Trial 84 finished with value: 71.50816092888273 and parameters: {'n_estimators': 2000, 'learning_rate': 0.0401465021369532, 'max_depth': 4, 'subsample': 0.9755014549472303, 'min_samples_leaf': 55, 'loss': 'huber', 'alpha': 0.7278590266065713}. Best is trial 60 with value: 65.17909529835002.[0m
+[32m[I 2025-06-07 15:53:17,563][0m Trial 85 finished with value: 67.62523724926038 and parameters: {'n_estimators': 1900, 'learning_rate': 0.08418959666835872, 'max_depth': 3, 'subsample': 0.9428970795369522, 'min_samples_leaf': 19, 'loss': 'huber', 'alpha': 0.7074753739144094}. Best is trial 60 with value: 65.17909529835002.[0m
+[32m[I 2025-06-07 15:53:19,955][0m Trial 86 finished with value: 75.45036629228765 and parameters: {'n_estimators': 1700, 'learning_rate': 0.0492861634291246, 'max_depth': 4, 'subsample': 0.9825985927967786, 'min_samples_leaf': 99, 'loss': 'huber', 'alpha': 0.8597462558388479}. Best is trial 60 with value: 65.17909529835002.[0m
+[32m[I 2025-06-07 15:53:21,921][0m Trial 87 finished with value: 66.91956283154677 and parameters: {'n_estimators': 1900, 'learning_rate': 0.07466113923286827, 'max_depth': 3, 'subsample': 0.9620406063408559, 'min_samples_leaf': 23, 'loss': 'huber', 'alpha': 0.7384977411713503}. Best is trial 60 with value: 65.17909529835002.[0m
+[32m[I 2025-06-07 15:53:22,458][0m Trial 88 finished with value: 78.99880799432694 and parameters: {'n_estimators': 900, 'learning_rate': 0.026702537004556243, 'max_depth': 4, 'subsample': 0.9307505476719997, 'min_samples_leaf': 13, 'loss': 'squared_error', 'alpha': 0.835944681471983}. Best is trial 60 with value: 65.17909529835002.[0m
+[32m[I 2025-06-07 15:53:24,245][0m Trial 89 finished with value: 67.38302035378815 and parameters: {'n_estimators': 1000, 'learning_rate': 0.06127554924008372, 'max_depth': 3, 'subsample': 0.8203328603874243, 'min_samples_leaf': 28, 'loss': 'huber', 'alpha': 0.7476140043405448}. Best is trial 60 with value: 65.17909529835002.[0m
+[32m[I 2025-06-07 15:53:26,181][0m Trial 90 finished with value: 67.24017084223433 and parameters: {'n_estimators': 2000, 'learning_rate': 0.03419836935373987, 'max_depth': 3, 'subsample': 0.8838826642585099, 'min_samples_leaf': 17, 'loss': 'huber', 'alpha': 0.7305050258338466}. Best is trial 60 with value: 65.17909529835002.[0m
+[32m[I 2025-06-07 15:53:28,984][0m Trial 91 finished with value: 67.20187975394667 and parameters: {'n_estimators': 1800, 'learning_rate': 0.05452997362971339, 'max_depth': 4, 'subsample': 0.9690273272127582, 'min_samples_leaf': 20, 'loss': 'huber', 'alpha': 0.7199958720694629}. Best is trial 60 with value: 65.17909529835002.[0m
+[32m[I 2025-06-07 15:53:31,880][0m Trial 92 finished with value: 66.87366344814598 and parameters: {'n_estimators': 1700, 'learning_rate': 0.04564588616314514, 'max_depth': 4, 'subsample': 0.9553927042968922, 'min_samples_leaf': 21, 'loss': 'huber', 'alpha': 0.7138164762885009}. Best is trial 60 with value: 65.17909529835002.[0m
+[32m[I 2025-06-07 15:53:36,131][0m Trial 93 finished with value: 66.64551847910111 and parameters: {'n_estimators': 1700, 'learning_rate': 0.03179190741989012, 'max_depth': 4, 'subsample': 0.9811778409411296, 'min_samples_leaf': 25, 'loss': 'huber', 'alpha': 0.7169108230009663}. Best is trial 60 with value: 65.17909529835002.[0m
+[32m[I 2025-06-07 15:53:40,162][0m Trial 94 finished with value: 67.40854642339981 and parameters: {'n_estimators': 1200, 'learning_rate': 0.031033385868803, 'max_depth': 5, 'subsample': 0.9888479252692298, 'min_samples_leaf': 34, 'loss': 'huber', 'alpha': 0.7240858335065847}. Best is trial 60 with value: 65.17909529835002.[0m
+[32m[I 2025-06-07 15:53:43,322][0m Trial 95 finished with value: 65.33719416545716 and parameters: {'n_estimators': 1800, 'learning_rate': 0.028333792134254587, 'max_depth': 4, 'subsample': 0.9384912585997248, 'min_samples_leaf': 25, 'loss': 'huber', 'alpha': 0.7422048354492952}. Best is trial 60 with value: 65.17909529835002.[0m
+[32m[I 2025-06-07 15:53:47,052][0m Trial 96 finished with value: 67.70048596058237 and parameters: {'n_estimators': 1800, 'learning_rate': 0.024761983360788834, 'max_depth': 4, 'subsample': 0.9174370127326535, 'min_samples_leaf': 30, 'loss': 'huber', 'alpha': 0.7412180923717415}. Best is trial 60 with value: 65.17909529835002.[0m
+[32m[I 2025-06-07 15:53:55,769][0m Trial 97 finished with value: 71.73108424528088 and parameters: {'n_estimators': 1900, 'learning_rate': 0.07932867927156326, 'max_depth': 5, 'subsample': 0.9356491517453495, 'min_samples_leaf': 15, 'loss': 'huber', 'alpha': 0.753558071609308}. Best is trial 60 with value: 65.17909529835002.[0m
+[32m[I 2025-06-07 15:53:57,745][0m Trial 98 finished with value: 67.87209756090245 and parameters: {'n_estimators': 2000, 'learning_rate': 0.028157258143424582, 'max_depth': 3, 'subsample': 0.9049107319400506, 'min_samples_leaf': 26, 'loss': 'huber', 'alpha': 0.7632484634630649}. Best is trial 60 with value: 65.17909529835002.[0m
+[32m[I 2025-06-07 15:54:00,942][0m Trial 99 finished with value: 69.04577476239766 and parameters: {'n_estimators': 1800, 'learning_rate': 0.0697667800651093, 'max_depth': 3, 'subsample': 0.9501295371403257, 'min_samples_leaf': 6, 'loss': 'huber', 'alpha': 0.7357127434506245}. Best is trial 60 with value: 65.17909529835002.[0m
 
-Instructions:
-1. Run:     python train_model.py public_cases.json
-2. Copy the block printed under
-        ### Paste the block below into calculate_reimbursement.py ###
-3. Paste it just below the PLACEHOLDER comment.
-4. `run.sh` should call this script with three CLI args.
-
-No external libraries required at runtime (only sys / math).
-"""
-
-import sys, math
-
-# ─── PLACEHOLDER — PASTE THE GENERATED BLOCK RIGHT BELOW THIS LINE ────────
-### Paste the block below into calculate_reimbursement.py ###
+Best Optuna params (val MAE 65.1791):
+  n_estimators: 1900
+  learning_rate: 0.08432819632958084
+  max_depth: 3
+  subsample: 0.973767290295144
+  min_samples_leaf: 16
+  loss: huber
+  alpha: 0.7361409058451146
+Public‑set MAE after GBM: 39.337
+MAE after bias table  : 32.010
 
 ### Paste the block below into calculate_reimbursement.py ###
 
@@ -14467,87 +14558,3 @@ BIAS_TABLE = {
 ARTE_ADJ = -333.7373
 FIVE_ADJ = -19.4995
 LONG_ADJ = 3.0563
-
-
-
-# ─── Safety net if user forgot to paste (prevents runtime crash) ───────────
-try:
-    GBM_TREES[0]
-except (NameError, IndexError):
-    print("ERROR: You forgot to paste the model block into "
-          "calculate_reimbursement.py", file=sys.stderr)
-    sys.exit(1)
-
-# ─── Feature engineering (order MUST match trainer) -----------------------
-def make_features(days: int, miles: float, receipts: float):
-    mpd = miles / days
-    spd = receipts / days
-    return [
-        # base features
-        float(days),
-        miles,
-        receipts,
-        mpd,
-        spd,
-        max(0.0, miles - 100.0),
-        max(0.0, miles - 500.0),
-        max(0.0, spd - 50.0),
-        max(0.0, spd - 120.0),
-        1.0 if days == 5 else 0.0,
-        1.0 if days <= 3 else 0.0,
-        1.0 if days >= 7 else 0.0,
-        1.0 if int(round(receipts * 100)) % 10 == 9 else 0.0,
-        # engineered signals
-        max(0.0, spd - 150.0),
-        max(0.0, spd - 250.0),
-        max(0.0, mpd - 300.0),
-        math.log1p(receipts),
-        1.0 if days >= 7 else 0.0,
-        (1.0 if days >= 7 else 0.0) * max(0.0, spd - 150.0),
-    ]
-
-# ─── Gradient‑boosted tree scorer -----------------------------------------
-def gbm_predict(feat):
-    s = GBM_BIAS
-    for tree in GBM_TREES:
-        idx = 0
-        while True:
-            node = tree[idx]
-            if 'l' not in node:                 # leaf
-                s += LEARNING_RATE * node['v']
-                break
-            idx = node['l'] if feat[node['f']] <= node['t'] else node['r']
-    return s
-
-# ─── Bias‑table + global tweaks -------------------------------------------
-def corrected_pred(days, miles, receipts, base_pred):
-    mpd = miles / days
-    spd = receipts / days
-
-    key = (min(days, 9), int(mpd // 50), int(spd // 50))
-    adj = BIAS_TABLE.get(key, 0.0)
-
-    # global deterministic tweaks
-    if days == 5:
-        adj += FIVE_ADJ
-    if days >= 12:
-        adj += LONG_ADJ
-    if int(round(receipts * 100)) % 50 == 49:        # 49‑ or 99‑cent rule
-        adj += ARTE_ADJ
-
-    return round(base_pred + adj, 2)
-
-
-
-
-# ─── CLI façade ------------------------------------------------------------
-if __name__ == "__main__":
-    if len(sys.argv) != 4:
-        sys.exit("Usage: calculate_reimbursement.py <days> <miles> <receipts>")
-    days     = int(sys.argv[1])
-    miles    = float(sys.argv[2])
-    receipts = float(sys.argv[3])
-
-    feat      = make_features(days, miles, receipts)
-    base_pred = gbm_predict(feat)
-    print(f"{corrected_pred(days, miles, receipts, base_pred):.2f}")

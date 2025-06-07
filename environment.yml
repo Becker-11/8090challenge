@@ -1,9 +1,0 @@
-# environment.yml
-name: expense-viz
-channels:
-  - conda-forge
-dependencies:
-  - python=3.11
-  - pandas
-  - matplotlib
-  - scikit-learn
